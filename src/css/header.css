@@ -1,0 +1,86 @@
+#opcoes-btn {
+    width: 800px;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header section {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    background-color: #6482AD;
+}
+
+#halter {
+    width: 7rem;
+    margin-left: 3rem;
+}
+
+
+header section p {
+    margin-right: 3rem;
+    font-size: 2rem;
+    color: #F5EDED;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 0.2rem;
+}
+
+#lista-btn {
+    background-color: #E2DAD6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    height: 3rem;
+}
+
+#lista-btn div {
+    display:flex;
+    justify-content: space-around;
+    width: 50vw;
+}
+
+.btn-academia {
+    height: 2rem;
+    width: 15rem;
+    font-size: 1.2rem;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 0.2rem;
+    color: #6482AD;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 1rem;
+    transition: .5s;
+}
+
+.btn-academia:hover {
+    background-color:#6482AD;
+    color: #F5EDED;
+    border: 0.2rem solid #F5EDED;
+}
+
+#pesquisa-li {
+    margin-right: 3rem;
+    display: flex;
+    align-items: center;
+}
+#pesquisa-aluno {
+    height: 1.8rem;
+    width: 30vw;
+}
+
+#pesquisa-btn {
+    width: 2rem;
+    cursor: pointer;
+}
+

@@ -1,7 +1,49 @@
-let bancoDeDados = [];
-
+let bancoDeDados =[
+    {
+        nomeCompleto: {
+            nome: "Matheus",
+            sobrenome: "Aguiar"
+        },
+        email: "matheus@gmail.com",
+        cpf: "123456789-12",
+        telefone: "946123714",
+        idade: 20
+    },
+    {
+        nomeCompleto: {
+            nome: "João",
+            sobrenome: "Silva"
+        },
+        email: "joao.silva@email.com",
+        cpf: "123456789-00",
+        telefone: "987654321",
+        idade: 25
+    },
+    {
+        nomeCompleto: {
+            nome: "Maria",
+            sobrenome: "Santos"
+        },
+        email: "maria.santos@email.com",
+        cpf: "234567890-11",
+        telefone: "976543210",
+        idade: 30
+    },
+    {
+        nomeCompleto: {
+            nome: "Carlos",
+            sobrenome: "Oliveira"
+        },
+        email: "carlos.oliveira@email.com",
+        cpf: "345678901-22",
+        telefone: "965432109",
+        idade: 28
+    }
+];
 const cadastrar = document.getElementById("cadastrar")
 
+
+const listaAlunos = document.getElementById("lista-alunos");
 cadastrar.addEventListener("click", () => {
     const botoes = document.querySelectorAll(".btn-academia");
     botoes.forEach((element) => element.style.display = 'none');
@@ -35,10 +77,23 @@ class aluno extends pessoa{
     }
 }
 
-
 const cadBtn = document.getElementById("cad-btn");
 
-cadBtn.addEventListener("click", ()=>{
+function atualizarListaAlunos() {
+    listaAlunos.innerHTML = '';
+
+    bancoDeDados.forEach(aluno => {
+        const nomeCompleto = `${aluno.nomeCompleto.nome} ${aluno.nomeCompleto.sobrenome}`;
+        
+        const li = document.createElement("li");
+        li.innerText = ` ${nomeCompleto}`;
+        listaAlunos.appendChild(li);
+    });
+}
+
+cadBtn.addEventListener("click", (e)=>{
+    e.preventDefault();
+
     const nome = document.getElementById('input-nome');
     const sobrenome = document.getElementById('input-sobrenome');
     const email = document.getElementById('input-email');
@@ -60,6 +115,7 @@ cadBtn.addEventListener("click", ()=>{
 
     const novoAluno = new aluno(nome.value, sobrenome.value, email.value, cpf.value, tel.value, idade.value, plano.value)
     console.log(novoAluno);
+
     aluno.cadastrarAluno(bancoDeDados, novoAluno);
     console.log(bancoDeDados);
 
@@ -71,5 +127,4 @@ cadBtn.addEventListener("click", ()=>{
     idade.value = '';
     plano.value = '';
 })
-
-
+atualizarListaAlunos();

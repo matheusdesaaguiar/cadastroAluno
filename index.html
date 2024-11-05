@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dados academia</title>
+    <link rel="stylesheet" href="./global.css">
+</head>
+<body>
+    <header>
+        <section>
+            <img src="./src/assets/images/halter.png" alt="imagem-de-um-halter" id="halter">
+            <p>Academia</p>
+        </section>
+        <ul id="lista-btn">
+            <div>
+                <li>
+                    <button class="btn-academia" id="cadastrar">Cadastrar aluno</button>
+                </li>
+                <li>
+                    <button class="btn-academia" id="excluir">Deletar aluno</button>
+                </li>
+            </div>
+            <li id="pesquisa-li">
+                <input type="text" id="pesquisa-aluno">
+                <button> <img src="./src/assets/images/pesquisa.png" alt="" id="pesquisa-btn"></button>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <form>
+            <section class="secao-form-cad">
+                <div class="div-form">
+                    <label id="nome" class="label" for="input-nome">nome</label>
+                    <input type="text" class="input-nome" id="input-nome">
+                    <label id="sobrenome" class="label" for="input-sobrenome">sobrenome</label>
+                    <input type="text" class="input-nome" id="input-sobrenome">
+                </div>
+                <div>
+                    <label class="label" for="input-email">email</label>
+                    <input type="email" class="input" id="input-email">
+                </div>
+                <div>
+                    <label class="label" for="input-cpf">Cpf</label>
+                    <input type="text"  class="input" id="input-cpf">
+                </div>
+               <div>
+                    <label class="label" for="input-tel">Telefone</label>
+                    <input type="text" class="input" id="input-tel">
+               </div>
+                <div>
+                    <label class="label" for="input-idade">Idade</label>
+                <input type="number" class="input" id="input-idade">
+                </div>
+                <div>
+                    <label class="label" for="input-plano">plano</label>
+                    <input type="text" class="input" id="input-plano">
+                    <button id="cad-btn">Cadastrar</button>
+                </div>
+            </section>
+            
+            <div id="mensagem-erro" style="color: red; display: none;"></div>
+        </form>
+        <ul id="lista-alunos">
+            
+        </ul>
+    </main>
+    <script src="./script.js" type="module"></script>
+</body>
+</html>
