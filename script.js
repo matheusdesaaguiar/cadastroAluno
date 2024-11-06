@@ -139,13 +139,14 @@ class aluno{
         bancoDeDados.splice(index, 1);
     }
 
-    static editarAluno(bancoDeDados, index, nomeEditar,sobrenomeEditar, emailEditar, telefoneEditar, idadeEditar){
+    static editarAluno(bancoDeDados, index, nomeEditar,sobrenomeEditar, emailEditar,cpfEditar, telefoneEditar, idadeEditar){
         bancoDeDados[index] = {
             nomeCompleto: {
                 nome: nomeEditar,
                 sobrenome: sobrenomeEditar
             },
             email: emailEditar,
+            cpf: cpfEditar,
             telefone: telefoneEditar,
             idade: idadeEditar
         }  
@@ -320,7 +321,7 @@ selecionarBtn.addEventListener("click", (e)=> {
     edtBtn.addEventListener("click", (e)=>{
         e.preventDefault();
         
-        aluno.editarAluno(bancoDeDados, index, nomeEditar.value,sobrenomeEditar.value, emailEditar.value, telefoneEditar.value, idadeEditar.value)
+        aluno.editarAluno(bancoDeDados, index, nomeEditar.value,sobrenomeEditar.value, emailEditar.value, cpfEditar, telefoneEditar.value, idadeEditar.value)
         atualizarListaAlunos();
         cpfFormularioEditar.style.display = "flex";
         formularioEditar.style.display = "none";
