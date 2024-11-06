@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.lista-alunos {
+    margin-left: 4rem;
+    width: 70vw;
+    margin-top: 3rem;
+    list-style: none;   
+    margin-right: 4rem;
+}
+
+.lista-alunos li {
+    background-color: #6482AD;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+    color: #F5EDED;
+    margin-bottom: 1rem;
+}
+.lista-alunos li:hover {
+    height: 8rem;
+    cursor: pointer;
+}
+
+#nome {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lista-alunos li:hover #nome {
+    border-bottom: 1px solid #F5EDED;
+}
+
+.nome-aluno {
+    font-size: 1.6rem;
+    padding-bottom: 0.5rem;
+}
+
+
+.mais-imagem {
+    width: 2rem;
+}
+.lista-alunos li:hover .mais-imagem {
+    transform: rotate(90deg);
+}
+
+.informacao-aluno {
+    display: none;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.lista-alunos li:hover .informacao-aluno {
+    display: flex;
+}
+
+.lista-alunos li.selecionado {
+    height: 12rem;
+    cursor: pointer;
+}
+
+.lista-alunos li.selecionado #nome {
+    border-bottom: 1px solid #F5EDED;
+}
+
+.lista-alunos li.selecionado .informacao-aluno {
+    display: flex;
+}
+
+.lista-alunos li.selecionado .mais-imagem {
+    transform: rotate(90deg);
+}
+
+.editar {
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.deletar{
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.editar img {
+    width: 5rem;
+}
+
+.deletar img {
+    width: 5rem;
+    background-color: red;
+}
+
+#mensagem {
+    display:none;
+}

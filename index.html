@@ -20,16 +20,15 @@
                 <li>
                     <button class="btn-academia" id="excluir">Deletar aluno</button>
                 </li>
+                <li>
+                    <button class="btn-academia" id="editar">Editar aluno</button>
+                </li>
             </div>
-            <li id="pesquisa-li">
-                <input type="text" id="pesquisa-aluno">
-                <button> <img src="./src/assets/images/pesquisa.png" alt="" id="pesquisa-btn"></button>
-            </li>
         </ul>
     </header>
     <main>
         <form>
-            <section class="secao-form-cad">
+            <section id="secao-form-cad">
                 <div class="div-form">
                     <label id="nome" class="label" for="input-nome">nome</label>
                     <input type="text" class="input-nome" id="input-nome">
@@ -52,17 +51,53 @@
                     <label class="label" for="input-idade">Idade</label>
                 <input type="number" class="input" id="input-idade">
                 </div>
-                <div>
-                    <label class="label" for="input-plano">plano</label>
-                    <input type="text" class="input" id="input-plano">
-                    <button id="cad-btn">Cadastrar</button>
-                </div>
+                <button id="cad-btn">Cadastrar</button>
+                <button id="cancelar-cad" class="cancelar-btn">Cancelar</button>
             </section>
-            
-            <div id="mensagem-erro" style="color: red; display: none;"></div>
+            <section id="secao-form-deletar">
+                    <label id="aluno-deletar" class="label" for="input-aluno-deletar">Cpf</label>
+                    <input type="text" class="input-nome" id="input-aluno-deletar">
+                    <button id="del-btn">Deletar</button>
+                    <button id="cancelar-del" class="cancelar-btn">Cancelar</button>
+            </section>
+            <section id="secao-form-editar">
+                <div id="encontrar-cpf">
+                    <label id="aluno-editar" class="label" for="input-aluno-editar">Informe o Cpf do aluno</label>
+                    <input type="text" class="input-nome" id="input-aluno-editar">
+                    <button id="selecionar-btn">Selecionar</button>
+                    <button id="voltar-editar" class="cancelar-btn">Voltar</button>
+                </div>
+                <div id="editar-info">
+                    <div>
+                        <label id="nome-editar" class="label" for="input-nome-editar">nome</label>
+                        <input type="text" class="input-nome" id="input-nome-editar">
+                        <label id="sobrenome" class="label" for="input-sobrenome-editar">sobrenome</label>
+                        <input type="text" class="input-nome" id="input-sobrenome-editar">
+                    </div>
+                    <div>
+                        <div>
+                            <label class="label" for="input-email-editar">email</label>
+                            <input type="email" class="input" id="input-email-editar">
+                        </div>
+                        <div>
+                            <label class="label" for="input-tel-editar">Telefone</label>
+                            <input type="text" class="input" id="input-tel-editar">
+                        </div>
+                        <div>
+                            <label class="label" for="input-idade-editar">Idade</label>
+                            <input type="number" class="input" id="input-idade-editar">
+                        </div>
+                        <button id="editar-btn">editar</button>
+                    </div>
+                </div>
+                <div id="mensagem-erro" style="color: red; display: none;"></div>
+            </section>
         </form>
-        <ul id="lista-alunos">
-            
+        <div id="mensagem"></div>
+        <ul class="lista-alunos">
+            <li>
+                
+            </li>
         </ul>
     </main>
     <script src="./script.js" type="module"></script>
